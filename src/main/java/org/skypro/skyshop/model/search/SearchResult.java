@@ -1,6 +1,4 @@
-package org.skypro.skyshop.service;
-
-import org.skypro.skyshop.model.search.Searchable;
+package org.skypro.skyshop.model.search;
 
 import java.util.UUID;
 
@@ -19,7 +17,7 @@ public class SearchResult {
         return new SearchResult(UUID.randomUUID().toString(), searchable.getName(), searchable.getContentType());
     }
 
-        public String getId() {
+    public String getId() {
         return id;
     }
 
