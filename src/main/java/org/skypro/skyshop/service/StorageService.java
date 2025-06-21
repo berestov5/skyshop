@@ -33,11 +33,11 @@ public class StorageService {
                 "Китай вывел спутник на орбиту земли используя двигатели на кефире.", UUID.randomUUID()));
     }
 
-    private void addProductStorage(Product product) {
+    public void addProductStorage(Product product) {
         productStorage.put(product.getId(), product);
     }
 
-    private void addArticleStorage(Article article) {
+    public void addArticleStorage(Article article) {
         articleStorage.put(article.getId(), article);
     }
 
@@ -57,7 +57,7 @@ public class StorageService {
     }
 
     public Optional<Product> getProductById(UUID id) {
-        if(id == null || !productStorage.containsKey(id)){
+        if (id == null || !productStorage.containsKey(id)) {
             throw new NoSuchProductException("Product not found with id: " + id);
         }
         return Optional.ofNullable(productStorage.get(id));
