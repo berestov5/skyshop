@@ -20,10 +20,10 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class SearchServiceTest {
     @Mock
-    StorageService storageService;
+    private StorageService storageService;
 
     @InjectMocks
-    SearchService searchService;
+    private SearchService searchService;
 
     @Test
     void whenSearchSuccessful_thenReturnMatchingResults() {

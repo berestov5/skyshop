@@ -33,11 +33,11 @@ public class StorageService {
                 "Китай вывел спутник на орбиту земли используя двигатели на кефире.", UUID.randomUUID()));
     }
 
-    public void addProductStorage(Product product) {
+    private void addProductStorage(Product product) {
         productStorage.put(product.getId(), product);
     }
 
-    public void addArticleStorage(Article article) {
+    private void addArticleStorage(Article article) {
         articleStorage.put(article.getId(), article);
     }
 
