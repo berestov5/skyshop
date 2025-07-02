@@ -57,7 +57,7 @@ public class StorageService {
     }
 
     public Optional<Product> getProductById(UUID id) {
-        if(id == null || !productStorage.containsKey(id)){
+        if (id == null || !productStorage.containsKey(id)) {
             throw new NoSuchProductException("Product not found with id: " + id);
         }
         return Optional.ofNullable(productStorage.get(id));
